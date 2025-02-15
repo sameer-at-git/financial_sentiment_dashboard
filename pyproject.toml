@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "financial_sentiment_dashboard"
+version = "0.1.0"
+description = "A tool for financial sentiment analysis and dashboards"
+authors = ["MD.SAMEER SAYED"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+pandas = "*"
+numpy = "*"
+matplotlib = "*"
+requests = "*"
+transformers = "*"
+torch = "*"
+python-dotenv = "*"
+yfinance = "*"
+investpy = "*"
+seaborn = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+black = "*"
+flake8 = "*"
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+include = '\.pyw?$'
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = "E203"
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    "*.egg-info"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-ra -q"

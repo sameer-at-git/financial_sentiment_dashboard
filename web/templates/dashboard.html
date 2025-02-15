@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Sentiment Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>FinSentiment</span>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><i class="fas fa-home"></i> Dashboard</li>
+                <li><i class="fas fa-upload"></i> Upload Data</li>
+                <li><i class="fas fa-chart-bar"></i> Analysis</li>
+                <li><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Financial Sentiment Analysis</h1>
+                <div class="user-profile">
+                    <i class="fas fa-bell"></i>
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="avatar">
+                </div>
+            </header>
+
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="upload-card">
+                    <div class="upload-area" id="dropZone">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Upload Your Financial Data</h3>
+                        <p>Drag and drop your CSV or Excel file here</p>
+                        <span>or</span>
+                        <button class="upload-btn">Browse Files</button>
+                        <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" hidden>
+                    </div>
+                    <div class="file-info" id="fileInfo" style="display: none;">
+                        <div class="file-details">
+                            <i class="fas fa-file-alt"></i>
+                            <span class="filename">filename.csv</span>
+                            <span class="filesize">0 MB</span>
+                        </div>
+                        <div class="upload-progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Uploads -->
+            <section class="recent-uploads">
+                <h2>Recent Uploads</h2>
+                <div class="uploads-grid">
+                    <!-- Upload cards will be dynamically added here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
