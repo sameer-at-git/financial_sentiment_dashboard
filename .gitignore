@@ -38,3 +38,4 @@ node_modules/
 
 # PHPStorm or other IDE config
 *.iml
+.env

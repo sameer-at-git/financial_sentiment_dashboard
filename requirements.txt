@@ -2,7 +2,9 @@ pandas
 numpy
 matplotlib
 requests
-beautifulsoup4
+python-dotenv
 transformers
 torch
-flask  
+yfinance
+investpy
+seaborn
